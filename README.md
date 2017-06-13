@@ -101,3 +101,5 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+#### widget　自定义控件包
+* 包含SwitchView,MaterialDialog,BadgeView,NavigationView等等．
