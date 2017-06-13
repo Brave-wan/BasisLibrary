@@ -67,6 +67,7 @@
  ConstUtils,ConvertUtils,CopyFileUtils,CountDownTimerUtils等等可以直接调用．具体请看源码<br/>
 #### video 音视频播放包
 * 基于ffmpeg开发并开源的轻量级视频播放器，支持播放本地网络视频，也支持流媒体播放。<br/>
+在xml使用<br/>
 ```Java
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
@@ -81,5 +82,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </RelativeLayout>
+```
+在java中具体使用如下使用：
+```Java
+public class MainActivity extends AppCompatActivity {
+
+    private IjkVideoView videoView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        videoView = (IjkVideoView) findViewById(R.id.video_view);
+        videoView.setAspectRatio(IRenderView.AR_ASPECT_FIT_PARENT);
+        videoView.setVideoURI(Uri.parse("http://zv.3gv.ifeng.com/live/zhongwen800k.m3u8"));
+        videoView.start();
+    }
+}
 ```
 
