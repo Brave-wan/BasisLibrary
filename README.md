@@ -26,11 +26,11 @@
   
  #### 编程规范
  
-* 源文件编码格式为 UTF-8。<br/>
+* 　源文件编码格式为 UTF-8。<br/>
 *  java代码中不出现中文，最多注释中可以出现中文<br/>
-* 服务端可以实现的，就不要放在客户端<br/>
-* 引用第三方库要慎重，避免应用大容量的第三方库，导致客户端包非常大<br/>
-* 处理应用全局异常和错误，将错误以邮件的形式发送给服务端<br/>
+* 　服务端可以实现的，就不要放在客户端<br/>
+* 　引用第三方库要慎重，避免应用大容量的第三方库，导致客户端包非常大<br/>
+* 　处理应用全局异常和错误，将错误以邮件的形式发送给服务端<br/>
 *  图片的.9处理<br/>
 *  使用静态变量方式实现界面间共享要慎重<br/>
 *  单元测试（逻辑测试、界面测试）<br/>
@@ -54,3 +54,32 @@
 * 不要提交自己不明白的代码<br/>
 * 提前协调好项目组成员的工作计划，减少冲突<br/>
 * 对提交的信息采用明晰的标注（写注释）<br/>
+
+# BasisLibrary 包结构说明
+
+#### base 基类 <br/>
+* BaseActivity,BaseFragment.封装Activity和Fragment的父类，抽象出公共的方法，达到模板化方便起到规范代码的目的<br/>
+* 封装一些功用的方法:如全局判断网络链接状态<br/>
+#### pulltorefresh 上拉加载下拉刷新
+* 封装　ListView,ScrollView,WebView等控件的上拉刷新下来加载动画及功能
+#### utils 常用工具包
+* 封装一些基础工具类．如AppUtils,BarUtils,CameraUtils,CleanUtils,ClipboardUtils,CloseUtils<br/>
+ ConstUtils,ConvertUtils,CopyFileUtils,CountDownTimerUtils等等可以直接调用．具体请看源码<br/>
+#### video 音视频播放包
+* 基于ffmpeg开发并开源的轻量级视频播放器，支持播放本地网络视频，也支持流媒体播放。<br/>
+```Java
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.hx.ijkplayer_demo.widget.media.IjkVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
+```
+

@@ -1,4 +1,4 @@
-package www.jinke.com.library;
+package www.jinke.com.library.utils.commont;
 
 import android.content.Context;
 import android.view.inputmethod.InputMethodManager;
