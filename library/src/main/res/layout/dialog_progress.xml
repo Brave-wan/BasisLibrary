@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_dialog_progress"
+
+        android:gravity="center"
+
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+
+        <www.jinke.com.library.widget.ProgressView
+            android:id="@+id/progressBarTwo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            ProgressWheel:pwBarColor="#339BB9"
+            ProgressWheel:pwBarLength="60dp"
+            ProgressWheel:pwBarWidth="2dp"
+            ProgressWheel:pwRimColor="@color/dialog"
+            ProgressWheel:pwRimWidth="2dp"
+            ProgressWheel:pwSpinSpeed="3dp"
+            ProgressWheel:pwTextColor="@color/white"
+            ProgressWheel:pwTextSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="加载中..."
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>
