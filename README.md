@@ -1,6 +1,6 @@
 # BasisLibrary
 
-<img src="https://github.com/googlesamples/android-architecture/wiki/image/aab-logo.png" alt="Android Architecture Blueprints"/>
+<img src="https://github.com/Brave-wan/BasisLibrary/blob/master/image/aab-logo.png" alt="Android Architecture Blueprints"/>
 
 #### 命名规范<br/>
 ##### 包命名规范<br/>
