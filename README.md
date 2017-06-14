@@ -61,19 +61,18 @@
 ####　根据不同的构建平台在项目中添加一下代码即可使用<br/>
 * 在gradle 文件中添加一下代码即可：
 ```Java
-    allprojects {
-		        repositories {
-			                ...
-			            maven { url 'https://jitpack.io' }
-	        	}
-	    }
-	    
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	} 
 ```
 
 ```Java
 dependencies {
 
-	        compile 'com.github.Brave-wan:BasisLibrary:2.0'
+	    compile 'com.github.Brave-wan:BasisLibrary:2.0'
 	}
 ```
 * 在ｍａｖｅｎ中添加以下代码即可
