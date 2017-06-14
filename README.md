@@ -58,6 +58,40 @@
 
 # BasisLibrary 包结构说明
 
+####　根据不同的构建平台在项目中添加一下代码即可使用<br/>
+* 在gradle 文件中添加一下代码即可：
+```Java
+    allprojects {
+		        repositories {
+			                ...
+			            maven { url 'https://jitpack.io' }
+	        	}
+	    }
+	    
+```
+
+```Java
+dependencies {
+
+	        compile 'com.github.Brave-wan:BasisLibrary:2.0'
+	}
+```
+* 在ｍａｖｅｎ中添加以下代码即可
+
+```Java
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+	
+		<dependency>
+    	    <groupId>com.github.Brave-wan</groupId>
+    	    <artifactId>BasisLibrary</artifactId>
+    	    <version>2.0</version>
+    	</dependency>
+```
 #### base 基类 <br/>
 * BaseActivity,BaseFragment.封装Activity和Fragment的父类，抽象出公共的方法，达到模板化方便起到规范代码的目的<br/>
 * 封装一些功用的方法:如全局判断网络链接状态<br/>
@@ -101,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+
 
 #### widget　自定义控件包
 * 包含SwitchView,MaterialDialog,BadgeView,NavigationView等等．
