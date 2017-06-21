@@ -134,8 +134,63 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+#### 应用统计集成(依赖与腾讯应用统计分析)
+* AndroidManifest.xml 注册监听
+```Java
+<meta-data
+<!--腾讯应用分析统计 应用key-->
+        <meta-data
+            android:name="TA_APPKEY"
+            android:value="ATNEU6HV999V" />
+        <!--腾讯应用分析统计 安装渠道-->
+        <meta-data
+            android:name="InstallChannel"
+            android:value="YOUR_CHANNEL" />     
+```
+* 在Application中根据自己的需要添加一下代码： 
+```Java
+// 请在初始化时调用，参数为Application或Activity或Service
+        StatService.setContext(this);
+        // 自动监控Activity生命周期，可以代替之前手动调用的onResume和onPause，防止漏打点的情况
+        StatService.registerActivityLifecycleCallbacks(this);
+        StatConfig.setAppKey(this, "ATNEU6HV999V");
+        // 设置投放渠道，即应用市场，也可通过Manifest配置
+        StatConfig.setInstallChannel(this, "应用宝");
+        //自动捕获程序异常并上传
+        StatConfig.setAutoExceptionCaught(true);
+        //开启degbug 模式
+        StatConfig.setDebugEnable(true);
+        // 10分钟上报一次的周期
+        StatConfig.setSendPeriodMinutes(10);
+        // 选择默认的上报策略
+        StatConfig.setStatSendStrategy(StatReportStrategy.PERIOD);
+        StatCrashReporter crashReporter = StatCrashReporter.getStatCrashReporter(this);
+        // 开启异常时的实时上报
+        crashReporter.setEnableInstantReporting(true);
+        // 开启java异常捕获
+        crashReporter.setJavaCrashHandlerStatus(true);
+        // 开启Native c/c++，即so的异常捕获
+        // 请根据需要添加，记得so文件
+        crashReporter.setJniNativeCrashStatus(true);
+```
+* 添加自定义事件
+```Java
+StatisticalConfig.RegistCustomKV(getActivity(), "home_paymentLife", "生活缴费 跳转支付宝相关页面");
+```
+* 页面统计
+```Java
+ @Override
+    protected void onResume() {
+        super.onResume();
+        StatisticalConfig.onResume(MainActivity.this,"mainActivity");
+    }
 
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        StatisticalConfig.onPause(MainActivity.this,"mainActivity");
+    }
+```
 #### widget　自定义控件包
 * 包含SwitchView,MaterialDialog,BadgeView,NavigationView等等．
 #### 依赖库文件
