@@ -8,7 +8,7 @@
     android:orientation="horizontal"
     android:visibility="gone">
 
-    <com.jinke.community.ui.view.ProgressWheel
+    <www.jinke.com.library.widget.ProgressWheel
         android:id="@+id/progressBarTwo"
         android:layout_width="50dp"
         android:layout_height="50dp"

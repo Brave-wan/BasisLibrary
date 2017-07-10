@@ -13,6 +13,13 @@ import android.view.View;
 import www.jinke.com.library.R;
 
 
+/**
+ * An indicator of progress, similar to Android's ProgressBar.
+ *
+ * @author Todd Davies
+ *         <p/>
+ *         See MIT-LICENSE.txt for licence details
+ */
 public class ProgressWheel extends View {
 
     //Sizes (with defaults)
@@ -235,7 +242,9 @@ public class ProgressWheel extends View {
         barLength = (int) a.getDimension(R.styleable.ProgressWheel_pwBarLength, barLength);
 
         delayMillis = a.getInteger(R.styleable.ProgressWheel_pwDelayMillis, delayMillis);
-        if (delayMillis < 0) { delayMillis = 10; }
+        if (delayMillis < 0) {
+            delayMillis = 10;
+        }
 
         // Only set the text if it is explicitly defined
         if (a.hasValue(R.styleable.ProgressWheel_pwText)) {
@@ -298,7 +307,7 @@ public class ProgressWheel extends View {
     }
 
     /**
-     *   Check if the wheel is currently spinning
+     * Check if the wheel is currently spinning
      */
     public boolean isSpinning() {
         return isSpinning;
@@ -394,8 +403,8 @@ public class ProgressWheel extends View {
     public void setBarWidth(int barWidth) {
         this.barWidth = barWidth;
 
-        if ( this.barPaint != null ) {
-            this.barPaint.setStrokeWidth( this.barWidth );
+        if (this.barPaint != null) {
+            this.barPaint.setStrokeWidth(this.barWidth);
         }
     }
 
@@ -406,8 +415,8 @@ public class ProgressWheel extends View {
     public void setTextSize(int textSize) {
         this.textSize = textSize;
 
-        if ( this.textPaint != null ) {
-            this.textPaint.setTextSize( this.textSize );
+        if (this.textPaint != null) {
+            this.textPaint.setTextSize(this.textSize);
         }
     }
 
@@ -450,8 +459,8 @@ public class ProgressWheel extends View {
     public void setBarColor(int barColor) {
         this.barColor = barColor;
 
-        if ( this.barPaint != null ) {
-            this.barPaint.setColor( this.barColor );
+        if (this.barPaint != null) {
+            this.barPaint.setColor(this.barColor);
         }
     }
 
@@ -462,8 +471,8 @@ public class ProgressWheel extends View {
     public void setCircleColor(int circleColor) {
         this.circleColor = circleColor;
 
-        if ( this.circlePaint != null ) {
-            this.circlePaint.setColor( this.circleColor);
+        if (this.circlePaint != null) {
+            this.circlePaint.setColor(this.circleColor);
         }
     }
 
@@ -474,8 +483,8 @@ public class ProgressWheel extends View {
     public void setRimColor(int rimColor) {
         this.rimColor = rimColor;
 
-        if ( this.rimPaint != null ) {
-            this.rimPaint.setColor( this.rimColor );
+        if (this.rimPaint != null) {
+            this.rimPaint.setColor(this.rimColor);
         }
     }
 
@@ -494,8 +503,8 @@ public class ProgressWheel extends View {
     public void setTextColor(int textColor) {
         this.textColor = textColor;
 
-        if ( this.textPaint != null ) {
-            this.textPaint.setColor( this.textColor );
+        if (this.textPaint != null) {
+            this.textPaint.setColor(this.textColor);
         }
     }
 
@@ -514,8 +523,8 @@ public class ProgressWheel extends View {
     public void setRimWidth(int rimWidth) {
         this.rimWidth = rimWidth;
 
-        if ( this.rimPaint != null ) {
-            this.rimPaint.setStrokeWidth( this.rimWidth );
+        if (this.rimPaint != null) {
+            this.rimPaint.setStrokeWidth(this.rimWidth);
         }
     }
 
@@ -534,8 +543,8 @@ public class ProgressWheel extends View {
     public void setContourColor(int contourColor) {
         this.contourColor = contourColor;
 
-        if ( contourPaint != null ) {
-            this.contourPaint.setColor( this.contourColor );
+        if (contourPaint != null) {
+            this.contourPaint.setColor(this.contourColor);
         }
     }
 
@@ -546,10 +555,12 @@ public class ProgressWheel extends View {
     public void setContourSize(float contourSize) {
         this.contourSize = contourSize;
 
-        if ( contourPaint != null ) {
-            this.contourPaint.setStrokeWidth( this.contourSize );
+        if (contourPaint != null) {
+            this.contourPaint.setStrokeWidth(this.contourSize);
         }
     }
 
-    public int getProgress() { return (int) progress; }
+    public int getProgress() {
+        return (int) progress;
+    }
 }
