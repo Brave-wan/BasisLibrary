@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/no_network_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:src="@mipmap/layout_empty_wifi" />
+
+    <TextView
+        android:id="@+id/no_network_st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text="连接失败"
+        android:textColor="@color/text_black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/no_network_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="请检查您的手机是否联网"
+        android:textColor="@color/base_text_color_light" />
+
+    <TextView
+        android:id="@+id/no_network_reload_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_verification_code"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="7dp"
+        android:text="重新加载"
+        android:textColor="@color/base_text_color_light" />
+
+
+</LinearLayout>

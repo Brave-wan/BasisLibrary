@@ -20,6 +20,10 @@
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
     </declare-styleable>
+    <declare-styleable name="LoadingLayout">
+        <attr name="isFirstVisible" format="boolean"></attr>
+    </declare-styleable>
+
     <declare-styleable name="CircleIndicator">
         <attr name="ci_width" format="dimension" />
         <attr name="ci_height" format="dimension" />

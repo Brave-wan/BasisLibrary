@@ -585,7 +585,7 @@ public class PlayerView {
             IjkMediaPlayer.native_profileBegin("libijkplayer.so");
             playerSupport = true;
         } catch (Throwable e) {
-            Log.e(TAG, "loadLibraries error", e);
+            Log.e(TAG, "loadLibraries layout_error", e);
         }
         screenWidthPixels = mContext.getResources().getDisplayMetrics().widthPixels;
         audioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);

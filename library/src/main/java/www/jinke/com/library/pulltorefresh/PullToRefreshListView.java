@@ -67,7 +67,7 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 	@Override
 	protected void onRefreshing(final boolean doScroll) {
 		/**
-		 * If we're not showing the Refreshing view, or the list is empty, the
+		 * If we're not showing the Refreshing view, or the list is layout_empty, the
 		 * the header/footer views won't show so we use the normal method.
 		 */
 		ListAdapter adapter = mRefreshableView.getAdapter();
@@ -288,7 +288,7 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 		protected void dispatchDraw(Canvas canvas) {
 			/**
 			 * This is a bit hacky, but Samsung's ListView has got a bug in it
-			 * when using Header/Footer Views and the list is empty. This masks
+			 * when using Header/Footer Views and the list is layout_empty. This masks
 			 * the issue so that it doesn't cause an FC. See Issue #66.
 			 */
 			try {
@@ -302,7 +302,7 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 		public boolean dispatchTouchEvent(MotionEvent ev) {
 			/**
 			 * This is a bit hacky, but Samsung's ListView has got a bug in it
-			 * when using Header/Footer Views and the list is empty. This masks
+			 * when using Header/Footer Views and the list is layout_empty. This masks
 			 * the issue so that it doesn't cause an FC. See Issue #66.
 			 */
 			try {

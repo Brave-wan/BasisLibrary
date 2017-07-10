@@ -655,21 +655,21 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
                     if (mOnErrorListener != null) {
                         mOnErrorListener.onError(mMediaPlayer, framework_err, impl_err);
                     }
-                    /* If an error handler has been supplied, use it and finish. */
+                    /* If an layout_error handler has been supplied, use it and finish. */
                     if (mOnInfoListener != null) {
                         if (mOnInfoListener.onInfo(mMediaPlayer, framework_err, 0)) {
                             return true;
                         }
                     }
 
-                    /* Otherwise, pop up an error dialog so the user knows that
+                    /* Otherwise, pop up an layout_error dialog so the user knows that
                      * something bad has happened. Only try and pop up the dialog
                      * if we're attached to a window. When we're going away and no
-                     * longer have a window, don't bother showing the user an error.
+                     * longer have a window, don't bother showing the user an layout_error.
                      */
                     if (getWindowToken() != null) {
                         Resources r = mAppContext.getResources();
-                        String message = "Unknown error";
+                        String message = "Unknown layout_error";
 
                         if (framework_err == MediaPlayer.MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK) {
                             message = "Invalid progressive playback";
@@ -677,7 +677,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
 
                         new AlertDialog.Builder(getContext())
                                 .setMessage(message)
-                                .setPositiveButton("error",
+                                .setPositiveButton("layout_error",
                                         new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int whichButton) {
                                             /* If we get here, there is no onError listener, so
@@ -723,7 +723,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
     }
 
     /**
-     * Register a callback to be invoked when an error occurs
+     * Register a callback to be invoked when an layout_error occurs
      * during playback or setup.  If no listener is specified,
      * or if the listener returned false, VideoView will inform
      * the user of any errors.

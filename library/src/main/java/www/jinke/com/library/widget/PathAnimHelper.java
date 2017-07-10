@@ -46,7 +46,7 @@ public class PathAnimHelper {
 
     public PathAnimHelper(View view, Path sourcePath, Path animPath, long animTime, boolean isInfinite) {
         if (view == null || sourcePath == null || animPath == null) {
-            Log.e(TAG, "PathAnimHelper init error: view 、sourcePath、animPath can not be null");
+            Log.e(TAG, "PathAnimHelper init layout_error: view 、sourcePath、animPath can not be null");
             return;
         }
         mView = view;

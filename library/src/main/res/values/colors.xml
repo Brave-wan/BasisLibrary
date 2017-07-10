@@ -31,4 +31,9 @@
     <color name="white_40">#bfffffff</color>
     <color name="white_60">#80ffffff</color>
     <color name="avg_line">#38acff</color>
+    <color name="base_text_color_light">#909090</color>
+    <color name="verification_phone">#e9013b</color>
+    <color name="verification_rim">#222222</color>
+    <color name="text_black">#333333</color>
+    <color name="base_loading_background">#f7f7f7</color>
 </resources>
