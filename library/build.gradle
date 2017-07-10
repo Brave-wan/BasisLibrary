@@ -22,7 +22,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -41,4 +41,5 @@ dependencies {
     compile 'com.jph.takephoto:takephoto_library:4.0.3'
     compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.0'
     compile 'com.dou361.ijkplayer-armv7a:jjdxm-ijkplayer-armv7a:1.0.0'
+    compile 'com.github.liuguangqiang.SuperRecyclerView:super-recyclerview:0.1.2'
 }
