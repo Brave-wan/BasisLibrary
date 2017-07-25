@@ -19,7 +19,7 @@ import java.util.Properties;
 public class TencentConfig {
 
 
-    public void initTencent(Application mContext, String AppKey, String platform) {
+    public static void initTencent(Application mContext, String AppKey, String platform) {
         // 请在初始化时调用，参数为Application或Activity或Service
         StatService.setContext(mContext);
         // 自动监控Activity生命周期，可以代替之前手动调用的onResume和onPause，防止漏打点的情况
