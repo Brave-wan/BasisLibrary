@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/hello"
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/id_main_sdv_sdv"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="hello" />
+        android:layout_height="wrap_content"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="3000"
+        fresco:failureImage="@mipmap/ic_launcher"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@mipmap/ic_launcher"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:progressBarAutoRotateInterval="1000"
+        fresco:progressBarImage="@mipmap/ic_launcher"
+        fresco:progressBarImageScaleType="centerInside"
+        fresco:retryImage="@mipmap/ic_launcher"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundAsCircle="false"
+        fresco:viewAspectRatio="1.6" />
 
 </LinearLayout>

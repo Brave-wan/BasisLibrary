@@ -7,6 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
+import com.facebook.drawee.view.SimpleDraweeView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,10 +24,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        data.add("hello");
-        data.add("hello");
-        data.add("hello");
-        data.add("hello");
+        data.add("http://t2.27270.com/uploads/tu/201707/9999/ab1dd75259.jpg");
+        data.add("http://t2.27270.com/uploads/tu/201707/9999/b6ec873126.jpg");
+        data.add("http://t2.27270.com/uploads/tu/201707/9999/d32231dddc.jpg");
+        data.add("http://t2.27270.com/uploads/tu/201707/9999/e32179c89d.jpg");
+        data.add("http://t2.27270.com/uploads/tu/201707/9999/0255e0427e.jpg");
         recyclerView = (RecyclerView) findViewById(R.id.listView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         MyAdapter adapter = new MyAdapter(this, data, R.layout.listview_item);
@@ -45,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onBind(BaseHolder holder, String s, int position) {
-            TextView textView = holder.getView(R.id.hello);
-            textView.setText("hello");
+            SimpleDraweeView textView = holder.getView(R.id.id_main_sdv_sdv);
+            textView.setImageURI(s);
+
         }
     }
 }
