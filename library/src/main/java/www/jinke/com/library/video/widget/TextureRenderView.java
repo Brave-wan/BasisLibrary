@@ -34,9 +34,6 @@ import java.lang.ref.WeakReference;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import tv.danmaku.ijk.media.player.IMediaPlayer;
-import tv.danmaku.ijk.media.player.ISurfaceTextureHolder;
-
 /**
  * ========================================
  * <p>
@@ -154,25 +151,25 @@ public class TextureRenderView extends TextureView implements IRenderView {
         }
 
         @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-        public void bindToMediaPlayer(IMediaPlayer mp) {
-            if (mp == null)
-                return;
-
-            if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) &&
-                    (mp instanceof ISurfaceTextureHolder)) {
-                ISurfaceTextureHolder textureHolder = (ISurfaceTextureHolder) mp;
-                mTextureView.mSurfaceCallback.setOwnSurfaceTecture(false);
-
-                SurfaceTexture surfaceTexture = textureHolder.getSurfaceTexture();
-                if (surfaceTexture != null) {
-                    mTextureView.setSurfaceTexture(surfaceTexture);
-                } else {
-                    textureHolder.setSurfaceTexture(mSurfaceTexture);
-                }
-            } else {
-                mp.setSurface(openSurface());
-            }
-        }
+//        public void bindToMediaPlayer(IMediaPlayer mp) {
+//            if (mp == null)
+//                return;
+//
+//            if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) &&
+//                    (mp instanceof ISurfaceTextureHolder)) {
+//                ISurfaceTextureHolder textureHolder = (ISurfaceTextureHolder) mp;
+//                mTextureView.mSurfaceCallback.setOwnSurfaceTecture(false);
+//
+//                SurfaceTexture surfaceTexture = textureHolder.getSurfaceTexture();
+//                if (surfaceTexture != null) {
+//                    mTextureView.setSurfaceTexture(surfaceTexture);
+//                } else {
+//                    textureHolder.setSurfaceTexture(mSurfaceTexture);
+//                }
+//            } else {
+//                mp.setSurface(openSurface());
+//            }
+//        }
 
         @NonNull
         @Override

@@ -60,8 +60,8 @@ dependencies {
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
     compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
-    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.0'
-    compile 'com.dou361.ijkplayer-armv7a:jjdxm-ijkplayer-armv7a:1.0.0'
+//    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.0'
+//    compile 'com.dou361.ijkplayer-armv7a:jjdxm-ijkplayer-armv7a:1.0.0'
     compile 'com.github.liuguangqiang.SuperRecyclerView:super-recyclerview:0.1.2'
     compile 'org.loader:autohideime:1.0'
 

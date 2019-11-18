@@ -23,8 +23,6 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.View;
 
-import tv.danmaku.ijk.media.player.IMediaPlayer;
-
 /**
  * ========================================
  * <p>
@@ -96,7 +94,7 @@ public interface IRenderView {
         /**
          * surface界面绑定到mediaplay上
          */
-        void bindToMediaPlayer(IMediaPlayer mp);
+//        void bindToMediaPlayer(IMediaPlayer mp);
 
         /**
          * 获取渲染的view

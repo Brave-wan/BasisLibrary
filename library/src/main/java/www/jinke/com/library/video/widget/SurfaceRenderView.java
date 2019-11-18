@@ -35,9 +35,6 @@ import java.lang.ref.WeakReference;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import tv.danmaku.ijk.media.player.IMediaPlayer;
-import tv.danmaku.ijk.media.player.ISurfaceTextureHolder;
-
 /**
  * ========================================
  * <p>
@@ -151,16 +148,16 @@ public class SurfaceRenderView extends SurfaceView implements IRenderView {
             mSurfaceHolder = surfaceHolder;
         }
 
-        public void bindToMediaPlayer(IMediaPlayer mp) {
-            if (mp != null) {
-                if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) &&
-                        (mp instanceof ISurfaceTextureHolder)) {
-                    ISurfaceTextureHolder textureHolder = (ISurfaceTextureHolder) mp;
-                    textureHolder.setSurfaceTexture(null);
-                }
-                mp.setDisplay(mSurfaceHolder);
-            }
-        }
+//        public void bindToMediaPlayer(IMediaPlayer mp) {
+//            if (mp != null) {
+//                if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) &&
+//                        (mp instanceof ISurfaceTextureHolder)) {
+//                    ISurfaceTextureHolder textureHolder = (ISurfaceTextureHolder) mp;
+//                    textureHolder.setSurfaceTexture(null);
+//                }
+//                mp.setDisplay(mSurfaceHolder);
+//            }
+//        }
 
         @NonNull
         @Override
